@@ -86,6 +86,7 @@ pause
 |-maxFalseAlarmRate | 目标每一级的最大勿检率  假阳数/所有负样本数|
 |-maxDepth | 每一级的最大深度|
 |-maxWeakCount | 每一级的最大弱分类器数量|
+
 并重命名为traincascade.bat。
 
 双击traincascade.bat文件，如果出现以下内容，恭喜你，训练顺利开始啦！请耐心等待吧~~
