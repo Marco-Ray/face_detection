@@ -35,14 +35,20 @@ opencv虽然有java、python的集成版本，但貌似无法训练自己的分�
 >dir /b >neg_img.txt
 ```
 会在neg_img文件夹下生成一个neg_img.txt文件，内容如下
-![neg_img_txt](E:/study/uestc/senior/DIP/database/ppt/neg_img_txt.png)
+
+![neg_img_txt](https://github.com/Marco-Ray/face_detection/blob/main/images/neg_img_txt.png)
+
 删除最后两行（空行和“neg_img.txt”），再用任意方式对每一行进行处理，最终结果需如下所示
-![neg_img_txt_f](E:/study/uestc/senior/DIP/database/ppt/neg_img_txt_f.png)
+
+![neg_img_txt_f](https://github.com/Marco-Ray/face_detection/blob/main/images/neg_img_txt_f.png)
+
 将neg_img.txt存放至train文件下，与neg_img文件夹并列。
 
 ### 生成正样本描述文件pos_img.txt
 前序步骤与生成neg_img.txt一致，只需将neg换为pos。但最终pos_img.txt内每一行的格式需如下所示
-![pos_img_txt](E:/study/uestc/senior/DIP/database/ppt/pos_img_txt_f.png)
+
+![pos_img_txt](https://github.com/Marco-Ray/face_detection/blob/main/images/pos_img_txt_f.png)
+
 其中1表示图片内有一个人脸（两个则相应改为2），0 0 24 24表示人脸在图片中的四个坐标，若resize中的尺寸不为24x24则需相应修改。
 同样最后把pos_img.txt存放在train文件夹下，与pos_img文件夹并列。
 
@@ -83,12 +89,16 @@ pause
 并重命名为traincascade.bat。
 
 双击traincascade.bat文件，如果出现以下内容，恭喜你，训练顺利开始啦！请耐心等待吧~~
-![train](E:/study/uestc/senior/DIP/database/ppt/train.png)
+
+![train](https://github.com/Marco-Ray/face_detection/blob/main/images/train.png)
+
 训练可中断，再次双击bat文件会继续训练。
 
 ## 6. 训练结束
 训练结束后会在Haar_xml文件下生成如下文件，其中cascade.xml是最终训练的结果，其他都是中间文件，可删除
-![result](E:/study/uestc/senior/DIP/database/ppt/results.png)
+
+![result](https://github.com/Marco-Ray/face_detection/blob/main/images/results.png)
+
 python使用自己的分类器检测实例：
 ```
 import cv2
@@ -122,4 +132,5 @@ img_path = 'XXX/XXX.jpg'
 detect(img_path)
 ```
 例子如下
-![exsample](E:/study/uestc/senior/DIP/database/ppt/exsample.png)
+
+![exsample](https://github.com/Marco-Ray/face_detection/blob/main/images/exsample.png)
